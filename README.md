@@ -1,8 +1,9 @@
 # Skyears
-Discord bot like .fmbot but for Rocksky.app
-You are free to use the logo as you'd like, or not to use the logo.
-<br>
 <img width="500" height="500" alt="logo" src="https://github.com/user-attachments/assets/6791e7ae-92ac-4195-9c44-18dc5fe662b1" />
+<br>
+Discord bot like .fmbot but for Rocksky.app
+You are free to use the logo as you'd like, or not to use the logo. (scroll for more info!)
+
 # Help! My scrobbles aren't showing up!
 The Rocksky API is a bit slow, so it might not show up for a little bit. If it isn't updated, it'll show your most recent one in the API data.
 # Why?
