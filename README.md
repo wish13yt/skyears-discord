@@ -1,5 +1,8 @@
 # Skyears
 Discord bot like .fmbot but for Rocksky.app
+You are free to use the logo, but please let people know the bot isn't by me in the bio or something.
+<br>
+<img width="500" height="500" alt="logo" src="https://github.com/user-attachments/assets/6791e7ae-92ac-4195-9c44-18dc5fe662b1" />
 # Why?
 Because I was really bored and Rocksky has a good API. I also just really like ATProto stuff so like more wins for me :3 
 # How?
