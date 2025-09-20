@@ -13,3 +13,5 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
 <br>
 <img width="136" height="68" alt="image" src="https://github.com/user-attachments/assets/7dd557fc-6513-413f-b51e-749b01ccf0ce" />
+# Disclaimer
+Not associated with Last.fm, .fmbot, Rocksky, or any other associates.
