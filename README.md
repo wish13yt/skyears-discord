@@ -1,6 +1,6 @@
 # Skyears
 Discord bot like .fmbot but for Rocksky.app
-You are free to use the logo, but please let people know the bot isn't by me in the bio or something.
+You are free to use the logo as you'd like, or not to use the logo.
 <br>
 <img width="500" height="500" alt="logo" src="https://github.com/user-attachments/assets/6791e7ae-92ac-4195-9c44-18dc5fe662b1" />
 # Why?
