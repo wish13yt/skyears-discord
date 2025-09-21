@@ -61,8 +61,21 @@ class MyClient(discord.Client):
             else:
                 await message.reply("DID file not found, and was not deleted.")
         if message.content.startswith("!skyhelp"):
-            await message.reply("SkyEars Help\n !link [did]: Link your ATProto DID to use the bot! \n !unlink: Unlink your DID! \n !fm: See your latest Rocksky song! \n !whatsmydid: See your DID you have linked!\n Licensed under GPL-3.0 by Freakybob Team. Not associated with Rocksky or associates.")
-
+            await message.reply("SkyEars Help\n !link [did]: Link your ATProto DID to use the bot! \n !unlink: Unlink your DID! \n !art: Shows the latest song's cover art. \n !fm: See your latest Rocksky song! \n !whatsmydid: See your DID you have linked!\n Licensed under GPL-3.0 by Freakybob Team. Not associated with Rocksky or associates.")
+        if message.content.startswith("!art"):
+            with open('db/' + str(message.author.id) + ".txt") as f: didfile = f.read()
+            conn = http.client.HTTPSConnection("api.rocksky.app")
+            payload = ''
+            headers = {}
+            conn.request("GET", "/xrpc/app.rocksky.actor.getActorScrobbles?limit=1&offset=0&did=" + didfile, payload, headers)
+            res = conn.getresponse()
+            data = res.read()
+            print(data.decode("utf-8"))
+            parsed = json.loads(data.decode("utf-8"))
+            scrobbles = parsed.get("scrobbles", [])
+            if scrobbles:
+                latest = scrobbles[0]
+                await message.reply(latest['albumArt'] + " from <" + latest['albumArt'] + ">")
 intents = discord.Intents.default()
 intents.message_content = True
 
