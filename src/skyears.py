@@ -61,7 +61,7 @@ class MyClient(discord.Client):
             else:
                 await message.reply("DID file not found, and was not deleted.")
         if message.content.startswith("!skyhelp"):
-            await message.reply("SkyEars Help\n /link [did]: Link your ATProto DID to use the bot! \n /unlink: Unlink your DID! \n !fm: See your latest Rocksky song! \n !whatsmydid: See your DID you have linked!\n Licensed under GPL-3.0 by Freakybob Team. Not associated with Rocksky or associates.")
+            await message.reply("SkyEars Help\n !link [did]: Link your ATProto DID to use the bot! \n !unlink: Unlink your DID! \n !fm: See your latest Rocksky song! \n !whatsmydid: See your DID you have linked!\n Licensed under GPL-3.0 by Freakybob Team. Not associated with Rocksky or associates.")
 
 intents = discord.Intents.default()
 intents.message_content = True
