@@ -75,7 +75,7 @@ class MyClient(discord.Client):
             scrobbles = parsed.get("scrobbles", [])
             if scrobbles:
                 latest = scrobbles[0]
-                await message.reply(latest['albumArt'] + " from <" + latest['albumArt'] + ">")
+                await message.reply(latest['albumArt'])
 intents = discord.Intents.default()
 intents.message_content = True
 
