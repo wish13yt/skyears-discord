@@ -5,7 +5,7 @@ Discord bot like .fmbot but for Rocksky.app
 You are free to use the logo as you'd like, or not to use the logo. (scroll for more info!)
 
 # Help! My scrobbles aren't showing up!
-The Rocksky API is a bit slow, so it might not show up for a little bit. If it isn't updated, it'll show your most recent one in the API data.
+The Rocksky API might not have your scrobble cached, so it might not show up for a little bit. If it isn't updated, it'll show your most recent one in the API data.
 # Why?
 Because I was really bored and Rocksky has a good API. I also just really like ATProto stuff so like more wins for me :3 
 # How?
