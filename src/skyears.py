@@ -78,6 +78,20 @@ class MyClient(discord.Client):
                 await message.reply(latest['albumArt'])
         if message.content.startswith("!cat"):
             await message.reply("https://cataas.com/cat")
+        if message.content.startswith("!countday"):
+            with open('db/' + str(message.author.id) + ".txt") as f: didfile = f.read()
+            conn = http.client.HTTPSConnection("api.rocksky.app")
+            payload = ''
+            headers = {}
+            conn.request("GET", "/xrpc/app.rocksky.charts.getScrobblesChart?did=" + didfile, payload, headers)
+            res = conn.getresponse()
+            data = res.read()
+            print(data.decode("utf-8"))
+            parsed = json.loads(data.decode("utf-8"))
+            scrobbles = parsed.get("scrobbles", [])
+            if scrobbles:
+                latest = scrobbles[-1]
+                await message.reply("Today's scrobble count for you: " + str(latest['count']) + " (uses UTC time)")
 intents = discord.Intents.default()
 intents.message_content = True
 
