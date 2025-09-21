@@ -76,8 +76,6 @@ class MyClient(discord.Client):
             if scrobbles:
                 latest = scrobbles[0]
                 await message.reply(latest['albumArt'])
-        if message.content.startswith("!cat"):
-            await message.reply("https://cataas.com/cat")
         if message.content.startswith("!countday"):
             with open('db/' + str(message.author.id) + ".txt") as f: didfile = f.read()
             conn = http.client.HTTPSConnection("api.rocksky.app")
@@ -92,6 +90,11 @@ class MyClient(discord.Client):
             if scrobbles:
                 latest = scrobbles[-1]
                 await message.reply("Today's scrobble count for you: " + str(latest['count']) + " (uses UTC time)")
+        if message.content.startswith("!cat"):
+            with urllib.request.urlopen("https://www.randomnumberapi.com/api/v1.0/random?min=100&max=1000&count=1") as response:
+                rndmnumsource = response.read().decode()
+            rndmnum = rndmnumsource.replace("[","").replace("]","")
+            await message.reply("https://cataas.com/cat?" + rndmnum)
 intents = discord.Intents.default()
 intents.message_content = True
 
