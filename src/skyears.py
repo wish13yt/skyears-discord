@@ -76,6 +76,8 @@ class MyClient(discord.Client):
             if scrobbles:
                 latest = scrobbles[0]
                 await message.reply(latest['albumArt'])
+        if message.content.startswith("!cat"):
+            await message.reply("https://cataas.com/cat")
 intents = discord.Intents.default()
 intents.message_content = True
 
